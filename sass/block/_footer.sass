@@ -1,0 +1,82 @@
+.footer
+    background-color: #1c242a
+    padding: 45px 0px
+    @media (max-width: 550px)
+        padding: 30px 0px
+    &__body
+        display: flex
+        @media (max-width: 767px)
+            display: block
+            text-align: center
+    &__column
+        &_full
+            flex: 1 1 auto
+        &:first-child
+            flex: 0 0 180px
+            @media (max-width: 767px)
+                margin: 0px 0px 20px 0px
+        &:last-child
+            text-align: right
+            @media (max-width: 767px)
+                display: flex
+                flex-direction: column
+                align-items: center
+    &__logo
+        display: inline-block
+        margin: 0px 0px 27px 0px
+        @media (max-width: 767px)
+            margin: 0px 0px 10px 0px
+    &__info
+        color: #bb9c66
+        font-size: 14px
+        font-weight: 400
+        @media (max-width: 767px)
+            display: none
+    &__menu
+        padding: 0px 30px
+        @media (max-width: 767px)
+            margin: 0px 0px 15px 0px
+    &__list
+        display: flex
+        flex-wrap: wrap
+        margin: 9px 0px 0px 0px
+        li
+            margin: 0px 15px 15px 0
+        @media (max-width: 767px)
+            justify-content: center
+            li
+                margin: 0px 7px 10px 0
+    &__link
+        font-family: "PFDin"
+        font-size: 14px
+        font-weight: 500
+        text-transform: uppercase
+        letter-spacing: 1.4px
+        &:hover
+            text-decoration: underline
+    &__phone
+        white-space: nowrap
+        display: flex
+        align-items: flex-start
+        color: #bb9c66
+        font-family: "BravoRG"
+        font-size: 50px
+        font-weight: 400
+        text-transform: uppercase
+        margin-bottom: 7px
+        margin: 5px 0px 0px 0px
+        @media (max-width: 991px)
+            font-size: 40px
+        small
+            font-size: 25px
+            margin: 2px 5px 0 0
+            @media (max-width: 991px)
+                font-size: 20px
+    &__callback
+        background: url(../img/footer/icon-callback.svg) left no-repeat
+        padding: 0px 0px 0px 15px
+        display: inline-block
+        color: #bb9c66
+        font-size: 14px
+        span
+            border-bottom: 1px dashed #bb9c66

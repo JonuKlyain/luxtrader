@@ -1,0 +1,257 @@
+// Основной шрифт на сайте ==================================================    
+body, a
+    +main-font 
+    color: $text-color
+    font-size: 14px
+// класс применяемый при использовании меню бургер
+.lock
+    overflow: hidden
+// класс применяемый при использовании меню бургер
+
+.page
+    padding: 75px 0px 0 0
+
+// Настройки контейнера ==================================================    
+
+.container
+    max-width: 970px
+    margin: 0 auto
+    padding: 0 10px
+    overflow: hidden
+
+// @media (max-width: 1200px) 
+//     .container 
+//         width: 970px
+
+// @media (max-width: 990px) 
+//     .container 
+//         max-width: 750px
+//         width: 95%
+
+// @media (max-width: 767px)
+//     .container
+//         width: 90%
+
+// @media (max-width: 440px) 
+//     .container 
+//         max-width: 320px
+//         width: 85%
+  
+// Настройки контейнера ==================================================    
+
+// Миксины =============================================================
+
+@mixin flexbox()
+    display: flex
+    font-size: 0
+@mixin flexinline()
+    display: inline-flex
+    font-size: 0
+
+// Миксины =============================================================
+    
+    
+// Настройка ibg ==================================================    
+    
+.ibg
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    position: relative
+    
+.ibg img
+    width: 0
+    height: 0
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+    
+// Настройка ibg ==================================================    
+
+// Кнопка настройки  ================================
+
+.btn
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    font-size: 15px
+    position: relative
+    transition: all 0.3s ease 0s
+    font-family: "PFDin"
+    letter-spacing: 2px
+    &:before,
+    &:after
+        content: ''
+        position: absolute
+        left: 0
+        height: 3px
+        width: 100%
+    &::before
+        top: 0
+        background-color: #c3a775
+    &::after
+        bottom: 0
+        background-color: #946c36
+
+
+    &__body
+        position: relative
+        width: 100%
+        &:before,
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            height: 100%
+            width: 3px
+            background-image: linear-gradient(to top, #946c36, #c3a775)
+        &::before
+            left: 0
+        &::after
+            right: 0
+        span
+            padding: 0 50px
+            position: relative
+            min-height: 50px
+            display: flex
+            justify-content: center
+            align-items: center
+            &::after
+                content: ''
+                height: 50%
+                width: 100%
+                top: 0
+                left: 0
+                position: absolute
+                background-image: linear-gradient(to top, #bb9c66 0%, rgba(187, 156, 102, 0) 100%)
+                opacity: 0.06
+                transition: all 0.8s ease 0s
+    &_big
+        .btn__body span
+            font-size: 21px
+            color: #000
+            font-weight: 500
+            font-family: "PFDin"
+            letter-spacing: 0px
+    @media (min-width: 992px)
+        &:hover
+            .btn__body
+                span
+                    &::after
+                        height: 100%
+                        opacity: 0.3
+
+// Кнопка настройки  ================================
+
+// Поле ввода настройки  ================================
+
+.input
+    position: relative
+    display: block
+    border-radius: 0 !important
+    height: 100%
+    padding: 0 0 0 25px
+    color: #4f4f4f
+    font-size: 15px
+
+    &.err
+        // border: 2px solid red
+em
+    position: absolute
+    color: red
+    margin: 10px 0px 0px 20px
+textarea.input
+    resize: none
+    height: 110px
+    padding: 10px 20px 
+
+// Поле ввода настройки  ================================
+
+// Повторяющиеся элементы  =======================
+
+.title
+    text-align: center
+    &__item
+        font-family: "Ceremonious"
+        color: #bb9c66
+        font-size: 40px
+        @media (max-width: 767px)
+            font-size: 30px
+    &__main
+        font-family: "PFDin"
+        font-size: 35px
+        line-height: 35px
+        text-transform: uppercase 
+        letter-spacing: 5.25px
+        margin: 25px 0px 0px 0px
+        font-weight: 500
+        @media (max-width: 767px)
+            font-size: 28px
+        @media (max-width: 440px)
+            font-size: 24px
+        &_b
+            color: #000
+        &_reg
+            font-weight: 400
+
+
+.block-header
+    &__title
+        margin: 0px 0px 20px 0px
+    &__decor
+
+.block-decor
+    display: flex
+    align-items: center
+    &__items
+        flex: 1 1 auto
+        display: flex
+        align-items: center
+        &::before
+            content: ''
+            height: 1px
+            flex: 1 1 auto
+            background-color: #bb9c66
+        &::after
+            content: ''
+            width: 25px * 0.72
+            height: 25px * 0.72
+            border: 1px solid #bb9c66
+            transform: rotate(45deg)
+            margin: 0px 5px
+        span
+            display: flex
+            align-items: center
+            margin: 0px 5px
+            &::before
+                content: ''
+                width: 10px
+                height: 10px
+                flex: 1 1 auto
+                border-radius: 50%
+                border: 1px solid #bb9c66
+                margin: 0px 5px
+            &::after
+                content: ''
+                width: 15px * 0.72
+                height: 15px * 0.72
+                flex: 0 0 15px * 0.72
+                border: 1px solid #bb9c66
+                transform: rotate(45deg)
+        &:last-child
+            flex-direction: row-reverse
+            span
+                flex-direction: row-reverse
+    &__icon
+        flex: 0 0 145px
+        text-align: center
+        img
+            max-width: 70px
+        @media (max-width: 767px)
+            flex: 0 0 95px
+
+
+// Повторяющиеся элементы  =======================

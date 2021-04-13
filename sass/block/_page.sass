@@ -1,0 +1,754 @@
+.main-slider
+    position: relative
+    &__item
+
+    &__body
+        position: relative
+    &__control
+        
+            
+.item-main-slider
+    position: relative
+    padding: 30px 0 100px 0
+    text-align: center
+    &__content
+        position: relative
+        z-index: 2
+    &__text
+        font-size: 15px
+        font-weight: 400
+        line-height: calc( 25 / 15 )
+        max-width: 690px
+        margin: 0px auto
+        margin-top: 27px
+        @media (max-width: 440px)
+            margin-top: 15px
+    &__btn
+        margin-top: 55px
+        @media (max-width: 440px)
+            margin: 20px 0px 0px 0px
+    &__bg
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+
+.control-main-slider
+    position: absolute
+    left: 50%
+    bottom: 0px
+    width: 100px
+    height: 100px
+    transform: translate(-50%, 50%)
+    display: flex
+    justify-content: center
+    align-items: center
+    &::after
+        content: ''
+        position: absolute
+        width: 70%
+        height: 70%
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(45deg)
+        background-color: #fff
+    &__arrow
+        height: 24px
+        width: 14px
+        z-index: 2
+        position: relative
+        background: url("../img/icons/sl-arrow.png") 0 0 no-repeat
+        background-size: contain
+        cursor: pointer
+        &_prev
+            transform: rotate(-180deg)
+        &_next
+
+    &__decor
+        margin: 0px 12px
+        z-index: 2
+        animation: rotate 5s infinite linear
+@keyframes rotate
+    0%
+        
+    100%
+        transform: rotate(360deg)
+
+// ====================================================================================
+.lots
+    padding: 85px 0 63px 0
+    &__header
+        margin: 0px 0px 40px 0px
+    &__slider
+
+.slider-lots
+    &__body
+        margin: 0px -50px
+        @media (max-width: 1050px)
+            margin: 0px 0px
+        .slick-track
+            align-items: stretch 
+    &__slide
+        margin: 0px 0px 50px 0px
+        padding: 0 50px
+        @media (max-width: 1050px)
+            padding: 0 15px
+    &__control
+
+.lot
+    display: flex
+    flex-direction: column
+    text-align: center
+    height: 100%
+    &__header
+        text-align: center
+        margin: 0px 0px 30px 0px
+        position: relative
+    &__img
+        display: block
+        padding: 0px 0px 98% 0px
+        border: 3px solid #bb9c66
+    &__timer
+    &__title
+        flex: 1 1 auto
+        color: #000000
+        font-family: "PFDin"
+        font-size: 21px
+        font-weight: 500
+        line-height: 25px
+        text-transform: uppercase
+        z-index: 2
+        margin: 0px 0px 30px 0px
+        &:hover
+            text-decoration: underline
+        @media (max-width: 980px)
+            font-size: 18px
+    &__info
+
+    &__btn
+        margin: 0px 25px
+        .btn__body
+            span
+                padding: 0px 5px
+.timer-lot
+    width: 72px
+    height: 72px
+    transform: translate(-50%, 50%)
+    display: inline-flex
+    align-items: center
+    flex-direction: column
+    position: relative
+    padding: 2px 0px 0px 0px
+    position: absolute
+    left: 50%
+    bottom: 0
+    div
+        position: relative
+        z-index: 2
+    &::before
+        content: ''
+        background-color: #fff
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        transform: rotate(45deg)
+        
+
+    &__icon
+        margin: 0px 0px 5px 0px
+    &__item
+        color: #000
+        font-size: 18px
+        font-family: 'PT Sans Narrow'
+
+.info-lot
+    display: flex
+    justify-content: space-between
+    align-items: start
+    @media (max-width: 980px)
+        justify-content: space-around
+    &__statistic
+        display: flex
+        flex-direction: column
+        flex: 0 0 50px
+    &__icon
+        margin: 0px 0px 6px 0px
+    &__value
+        color: #000000
+        font-size: 14px
+        position: relative
+        font-weight: 600
+        &::before
+            content: ''
+            position: absolute
+            width: 100%
+            height: 1px
+            left: 0
+            bottom: -4px
+            background-color: #bb9c66
+    &__current-bet
+
+
+.current-bet-info-lot
+    display: flex
+    flex-direction: column
+    position: relative
+    margin: 5px 0px 35px 0px
+    div
+        z-index: 2
+    &::after
+        content: ''
+        position: absolute
+        width: 100px * 0.72
+        height: 100px * 0.72
+        border: 1px solid #bb9c66
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(45deg)
+
+    &__label
+        color: #000000
+        font-family: "PT Sans"
+        font-size: 14px
+        font-weight: 600
+        margin: 0px 0px 23px 0px
+    &__value
+        color: #1c242a
+        font-family: "BravoRG"
+        font-size: 50px
+        font-weight: 400
+        line-height: 21px
+        margin: 0px 0px 15px 0px
+        white-space: nowrap
+        @media (max-width: 980px)
+            font-size: 35px
+    &__currency     
+        color: #000000
+        font-size: 14px
+        font-weight: 600
+
+.control-slider-lots
+    display: flex
+    justify-content: center
+    align-items: center
+    &__arrow
+        display: flex
+        align-items: center
+        cursor: pointer
+        justify-content: flex-end
+        span
+            background: url(../img/icons/sl-lots.svg) left no-repeat
+            flex: 0 0 108px
+            width: 108px
+            height: 35px
+            // overflow: hidden
+            @media (max-width: 450px)
+                flex: 0 0 50px
+                width: 50px
+        &::after
+            content: ''
+            margin: 0px 5px
+            width: 15px
+            height: 15px
+            border: 1px solid #bb9c66
+            border-radius: 50%
+        &:last-child
+            flex-direction: row-reverse
+            span
+                transform: rotate(180deg)
+    &__link
+        background: url(../img/icons/circle.png) 0 0 no-repeat
+        flex: 0 0 100px
+        height: 100px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #000000
+        font-family: "PFDin"
+        font-size: 21px
+        font-weight: 500
+        text-transform: uppercase
+        margin: 0px 20px
+
+// ====================================================================================
+// ====================================================================================
+.categories
+    margin: 0px 0px 70px 0px
+    ._container
+        overflow: hidden
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            height: 45px
+            width: 100% 
+            background-color: #fff
+    &__row
+        display: flex
+        position: relative
+        flex-wrap: wrap
+        margin: 0px -50px
+        padding: 34px 0px 0px 0px
+        &::after,
+        &::before
+            content: '' 
+            position: absolute
+            top: 4px
+            width: 24px * 0.72
+            height: 24px * 0.72
+            flex: 0 0 24px * 0.72
+            margin: 0px 0px 0px 0.5px
+            transform: translate(-50%, 0) rotate(45deg)
+            border: 1px solid #bb9c66
+        &::before
+            left: 33.333%
+            @media (max-width: 975px)
+                left: 50%
+        &::after
+            left: 66.667%
+            @media (max-width: 975px)
+                display: none
+    &__column
+        flex: 0 1 33.333%
+        padding: 0px 50px 25px 50px
+        margin: 0px 0px 25px 0px
+        position: relative
+        display: flex
+        justify-content: center
+        &::before
+            content: ''
+            width: 10px
+            height: 10px
+            flex: 0 0 10px
+            border-radius: 50%
+            background-color: #bb9c66
+            position: absolute
+            left: 50% 
+            bottom: -5px
+            transform: translate(-50%, 0)
+        @media (max-width: 975px)
+            flex: 0 1 50%
+        @media (max-width: 650px)
+            flex: 0 1 100%
+    &__item
+    
+    &__decor
+        position: absolute
+        right: 0
+        top: 0
+        width: 24px
+        height: calc( 100% + 9px )
+        transform: translate(50%, 0)
+        display: flex
+        flex-direction: column
+        align-items: center
+        z-index: 2
+        &::before
+            content: ''
+            background-color: #bb9c66
+            width: 1px
+            flex: 1 1 auto
+        &::after
+            content: ''
+            width: 24px * 0.72
+            height: 24px * 0.72
+            flex: 0 0 24px * 0.72
+            transform: rotate(45deg)
+            border: 1px solid #bb9c66
+            margin: 15px 0px 0px 0px
+        span
+            display: flex
+            flex-direction: column
+            align-items: center
+            flex: 1 1 auto
+            &::before
+                content: ''
+                width: 10px
+                height: 10px
+                flex: 0 0 10px
+                border-radius: 50%
+                background-color: #bb9c66
+                margin: 20px 0px
+            &::after
+                content: ''
+                background-color: #bb9c66
+                width: 1px
+                flex: 1 1 auto
+.text-categories
+    &__body
+        background: url(../img/categories/text-decor2.png) left top repeat-y
+        background-size: 85px
+        padding: 10px 0px 20px 130px
+        position: relative
+        @media (max-width: 767px)
+            padding: 10px 10px 20px 10px
+            background-size: none
+            background: none
+            
+        &::before
+            content: ''
+            position: absolute
+            top: -5px
+            left: 0
+            width: 85px
+            height: 12px
+            background: url(../img/categories/text-decor-header.png) left top no-repeat
+            background-size: 85px
+            @media (max-width: 767px)
+                background: none
+        p
+            color: #333333
+            font-size: 15px
+            line-height: calc(25/15)
+            margin: 0px 0px 25px 0px
+            &:last-child
+                margin: 0px 0px 0px 0px
+
+.item
+    position: relative
+    width: 250px
+    height: 250px
+    padding: 22px 30px 40px 30px
+    overflow: hidden 
+    text-align: center
+    border-radius: 50%
+    display: flex
+    align-items: center
+    flex-direction: column
+    @media (min-width: 992px)
+        &:hover
+            .item__bg
+                transform: scale(1.1)
+    &__link
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0  
+        left: 0
+        border-radius: 50%
+        z-index: 2
+    &__icon
+        position: relative
+        z-index: 2
+        margin: 0px 0px 25px 0px
+    &__title
+        position: relative
+        z-index: 2
+        font-size: 21px
+        text-transform: uppercase
+        letter-spacing: 2.1px
+        font-family: "PFDin"
+        font-weight: 500
+        padding: 0px 0px px 0px
+        flex: 1 1 auto
+        line-height: 25px
+    &__decor
+        z-index: 2
+
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        transition: 0.5s all ease 0s
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(0, 0, 0, 0.7)
+
+
+// ====================================================================================
+// ====================================================================================
+.services
+    background-color: #1c242a
+    padding: 60px 0px
+    @media (max-width: 640px)
+        padding: 40px 0px
+    &__header
+        margin: 0px 0px 40px 0px
+    &__row
+        margin: 0px -50px
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+    &__column 
+        padding: 0px 50px
+        margin: 0px 0px 40px 0px
+        flex: 0 1 33.333%
+        max-width: 33.333%
+        overflow: hidden
+        @media (max-width: 975px)
+            flex: 0 1 50%
+            max-width: 50%
+        @media (max-width: 640px)
+            flex: 0 1 100%
+            max-width: 100%
+    &__item
+
+.service
+    display: flex
+    flex-direction: column
+    text-align: center
+    height: 100%
+    &__image
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 205px
+        margin-bottom: 10px
+    &__title
+        flex: 1 1 auto
+        font-family: "PFDin"
+        font-size: 21px
+        font-weight: 500
+        line-height: 25px
+        text-transform: uppercase
+        letter-spacing: 1.1px
+    &__text
+        margin: 25px 0px 0px 0px
+        color: #bb9c66
+        font-size: 15px
+        max-height: 50px
+        overflow: hidden
+        font-weight: 400
+        line-height: 25px
+    &__btn  
+        margin: 30px 0px 0px 0px
+        position: relative
+        font-family: "PFDin"
+        font-size: 21px
+        font-weight: 500
+        line-height: 25px
+        text-transform: uppercase
+        letter-spacing: 2.12px
+        &::before
+            content: ''
+            position: absolute
+            background-color: #ba9c66
+            height: 1px
+            width: 100%
+            top: 50%
+            left: 0
+        span
+            background-color: #1c242a
+            position: relative
+            z-index: 2
+            padding: 0px 15px
+
+// ====================================================================================
+// ====================================================================================
+
+.quotes
+    padding: 64px 0px 75px
+    @media (max-width: 767px)
+        padding: 30px 0 30px
+    &__header
+    
+    &__slider
+.slider-quotes
+    &__body
+        .slick-slide.slick-active
+            align-items: center
+    &__slide
+        display: flex
+        align-items: center
+        @media (max-width: 767px)
+            margin: 20px 0px 0px 0px
+        @media (max-width: 550px)
+            display: block
+    &__image
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0px 20px
+        flex: 0 0 320px/950px*100%
+        img
+            max-width: 100%
+    &__text
+        flex: 0 1 515px
+    &__title
+        color: #000
+        font-size: 25px
+        font-style: italic
+        line-height: 30px/25px
+        margin: 0px 0px 30px/25px*1em 0px
+        @media (max-width: 550px)
+            font-size: 16px 
+
+    &__info
+        color: #1c242a
+        font-size: 15px
+        @media (max-width: 767px)
+            margin-bottom: 20px
+        p
+            margin: 0px 0px 7px 0px
+            &:last-child
+                margin: 0px 0px 0px 0px
+    &__control
+
+.control-slider-quotes
+    display: flex
+    justify-content: center
+    align-items: center
+    max-width: 400px    
+    margin: 0 auto
+    &__decor
+        display: flex
+        align-items: center
+        flex: 0 1 33.333%
+        &::before
+            content: ''
+            flex: 1 1 auto
+            height: 1px
+            background-color: #bb9c66
+        &::after
+            content: ''
+            width: 10px
+            height: 10px
+            border: 1px solid #bb9c66
+            border-radius: 50%
+            margin: 0px 0px 0px 5px
+        &:last-child
+            flex-direction: row-reverse
+            &::after
+                margin: 0px 5px 0px 0px
+
+
+    &__link
+        flex: 0 1 33.333%
+        text-align: center
+    &__circle   
+        cursor: pointer
+        background: url(../img/quotes/icon-row.svg) center no-repeat
+        display: inline-flex
+        width: 50px
+        height: 50px
+        border: 1px solid #bb9c66
+        border-radius: 50%
+
+
+
+// ====================================================================================
+// ====================================================================================
+.info
+    padding: 0px 0px 75px 0px
+    @media (max-width: 767px)
+        padding: 0px 0px 35px 0px
+    &__row
+        display: flex
+        margin: 0px -22px
+        flex-wrap: wrap
+        @media (max-width: 767px)
+            display: block
+    &__column
+        flex: 0 1 50%
+        padding: 0px 22px
+        margin: 0px 0px 55px 0px
+        @media (max-width: 767px)
+            margin: 0px 0px 30px 0px
+        &:last-child
+            flex: 1 1 100%  
+            margin: 0px 0px
+    &__date
+        color: #b9ac97
+        font-size: 12px
+        margin: 0px 0px 5px 0px
+    &__label
+        color: #333333
+        font-weight: 700
+        text-decoration: underline
+        font-size: 15px
+        margin: 0px 0px 5px 0px
+    &__text
+        font-size: 15px
+        color: #000000
+        line-height: calc( 25 /15  )
+    &__block
+
+    &__title
+
+    &__content
+
+    &__item
+        margin: 0px 0px 30px 0px
+        @media (max-width: 767px)
+            margin: 0px 0px 20px 0px
+    &__subscribe
+
+.title-info
+    display: flex
+    align-items: center
+    font-size: 35px
+    color: #000000
+    font-family: 'PFDin'
+    text-transform: uppercase
+    font-weight: 500
+    margin: 0px 0px 30px 0px
+    @media (max-width: 767px)
+        margin: 0px 0px 15px 0px
+    &:first-child
+        span
+            margin: 0px 15px 0px 0px
+            display: flex
+            flex-direction: column
+            align-items: center
+        
+.subscribe
+    &__title
+
+    &__body
+        display: flex
+        margin: 0px -22px
+        @media (max-width: 767px)
+            display: block
+    &__column
+        flex: 0 1 50%
+        padding: 0px 22px
+    &__text
+        font-size: 15px
+        line-height: calc( 25 / 15 )
+        color: #000
+        
+    &__form
+        @media (max-width: 767px)
+            margin: 25px 0px 0px 0px
+
+.form-subscribe
+    height: 50px
+    border: 3px solid #bb9c66
+    background-color: #ffffff
+    display: flex
+    &__input
+        flex: 1 1 auto
+    &__btn
+        position: relative
+        flex: 0 0 95px
+        background-color: transparent
+        &::before
+            content: ''
+            position: absolute
+            background-color: #bb9c66
+            width: 1px
+            height: 32px    
+            left: 0
+            top: 50%
+            transform: translate(0, -50%)
+        span
+            background: url(../img/info/input-row.svg) right no-repeat
+            padding: 0px 32px 0px 0px
+            color: #1c242a
+            font-family: "PFDin"
+            font-size: 21px
+            font-weight: 500
+            text-transform: uppercase
+            letter-spacing: 2.12px
+// ====================================================================================

@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'BravoRG';
+    src: url('BravoRG.woff2') format('woff2'),
+        url('BravoRG.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF Din Text Cond Pro';
+    src: url('PFDinTextCondPro-Regular.woff2') format('woff2'),
+        url('PFDinTextCondPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ceremonious One';
+    src: url('CeremoniousOne.woff2') format('woff2'),
+        url('CeremoniousOne.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF Din Text Cond Pro';
+    src: url('PFDinTextCondPro-Medium.woff2') format('woff2'),
+        url('PFDinTextCondPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
